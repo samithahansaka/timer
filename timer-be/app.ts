@@ -20,6 +20,10 @@ app.get("/", (req, res) => {
   } = req;
   const savedId = "THIS_IS_RANDOM_STRING";
 
+  if(!jwt){
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+
   jsonwebtoken.verify(jwt.toString(), process.env.JWT_SECRET, function (
     err,
     decoded: any
