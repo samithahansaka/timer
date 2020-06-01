@@ -16,5 +16,6 @@ Then run below scripts inorder to run the BE
 
 Run below scripts to run the FE
      
+     $ cd timer-fe
      $ yarn
      $ yarn start
